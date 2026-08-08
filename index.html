@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#050816">
+  <meta name="mobile-web-app-capable" content="yes">
+  <title>Level Up Fitness</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- LOGIN -->
+  <section id="login" class="login-screen">
+    <div class="login-card">
+      <div class="logo">⚡</div>
+      <div class="green">SYSTEM ONLINE</div>
+      <h1>LEVEL UP</h1>
+      <p class="muted">Build strength. Complete quests. Transform your body.</p>
+      <input id="nameInput" type="text" maxlength="24" placeholder="Enter your Hunter name">
+      <button class="primary" onclick="login()">ENTER THE SYSTEM</button>
+    </div>
+  </section>
+
+  <!-- APP -->
+  <main id="app" class="hidden">
+    <header class="topbar">
+      <div class="brand">
+        <div class="mini-logo">⚡</div>
+        <div>
+          <b>LEVEL UP</b>
+          <small>FITNESS SYSTEM</small>
+        </div>
+      </div>
+
+      <div class="top-actions">
+        <span id="timer" class="timer">00:00</span>
+        <button class="icon-btn" onclick="logout()" aria-label="Logout">↪</button>
+      </div>
+    </header>
+
+    <section id="content"></section>
+
+    <nav class="bottom-nav">
+      <button data-tab="0" onclick="showTab(0)">
+        <span>⌂</span>Home
+      </button>
+      <button data-tab="1" onclick="showTab(1)">
+        <span>✓</span>Quests
+      </button>
+      <button data-tab="2" onclick="showTab(2)">
+        <span>◈</span>Phase
+      </button>
+      <button data-tab="3" onclick="showTab(3)">
+        <span>⚔</span>Forge
+      </button>
+      <button data-tab="4" onclick="showTab(4)">
+        <span>◉</span>Oracle
+      </button>
+      <button data-tab="5" onclick="showTab(5)">
+        <span>🏆</span>Badges
+      </button>
+    </nav>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
